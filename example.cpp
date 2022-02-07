@@ -1,6 +1,7 @@
 #include<iostream>
 #include"lang/serializable.h"
 #include<vector>
+#include <map>
 using namespace std;
 
 
@@ -22,6 +23,7 @@ public:
 		Config config=Reflectable::get_config(this);
 		//std::pair<string, void*> temp = {"a", &Node::add};
 		config.update({
+			{"m1", m1},
 			{"v1", v1},
 			{"x",x},
 			{"y",y},
@@ -32,6 +34,7 @@ public:
 		return config;
 	}
 private:
+	map<int, string> m1;
 	vector<int> v1;
 	int x=1;
 	float y=5;
@@ -39,11 +42,22 @@ private:
 };
 int main()
 {
+	// std::pair<int ,int> p1{100, 200};
+	// using pair1 = decltype(p1);
+	// int n = std::tuple_size<pair1>::value;
+	// cout << n << "pair size" << endl;
+
+	std::ostringstream oss;
+	// oss << std::vector<string>{"123", "asd"};
+	// oss << std::vector<int>{1, 2};
 	Serializable::Regist<Node>();
 	void*object=Reflectable::get_instance("Node");                        //创建实例 
 
 	vector<int> temp = {2,34,5};
 	Reflectable::set_field(*(Node*)object,"v1",std::vector<int>{2,34,5});
+
+	map<int, string> temp1 = {{1,"jj"}, {32, "ca"}};
+	Reflectable::set_field(*(Node*)object,"m1",temp1);
 
 	Reflectable::set_field<int>(object,"Node","x",4);                     //通过字符串名称修改成员变量
 	Reflectable::set_field<float>(object,"Node","y",5);
