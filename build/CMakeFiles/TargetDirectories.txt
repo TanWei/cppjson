@@ -1,0 +1,3 @@
+/Users/leilei/MyWorkSpace/CPPSpace/cppjson/build/CMakeFiles/rebuild_cache.dir
+/Users/leilei/MyWorkSpace/CPPSpace/cppjson/build/CMakeFiles/edit_cache.dir
+/Users/leilei/MyWorkSpace/CPPSpace/cppjson/build/CMakeFiles/cppjson.dir

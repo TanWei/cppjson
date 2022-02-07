@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/leilei/MyWorkSpace/CPPSpace/cppjson/build",
+  "command": "/usr/bin/clang++   -I/Users/leilei/MyWorkSpace/CPPSpace/cppjson/lang  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2   -std=gnu++1z -o CMakeFiles/cppjson.dir/example.cpp.o -c /Users/leilei/MyWorkSpace/CPPSpace/cppjson/example.cpp",
+  "file": "/Users/leilei/MyWorkSpace/CPPSpace/cppjson/example.cpp"
+}
+]
